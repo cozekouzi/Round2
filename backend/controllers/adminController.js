@@ -21,13 +21,16 @@ const getAdminById = async (req, res) => {
 
 //create bug
 const setAdmin = async (req, res) => {
-  if (!req.body.text) {
-    res.status(400);
-    throw new Error("please help");
+  if (!req.body) {
+    res.status(400).json("Please enter a admin info");
   }
 
   const admin = await Admin.create({
-    text: req.body.text,
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    discription: req.body.discription,
+
   });
 
   res.status(200).json(admin);

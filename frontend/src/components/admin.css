@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}.adminCard{
+    border: 1px solid;
+    width: 40vh;height: 15vh;
+    text-align: center;
+
+}
+
+.adminCards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
